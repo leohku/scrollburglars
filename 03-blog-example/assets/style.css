@@ -6,6 +6,10 @@
   line-height: 1.5;
 }
 
+body {
+  position: relative;
+}
+
 h1 {
   font-size: clamp(1.75rem, 3vw + 1rem, 3rem);
   font-weight: bold;
@@ -25,6 +29,8 @@ main {
   padding-top: 64px;
   isolation: isolate;
   max-width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 article p,
@@ -93,9 +99,16 @@ a {
   margin-bottom: 64px;
 }
 
+.absolute-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .max-width-wrapper {
   max-width: 680px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -112,6 +125,7 @@ a {
 .social-wrapper {
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 
 .social-icons {
@@ -149,7 +163,7 @@ a {
 .heading-decoration {
   position: absolute;
   top: -25px;
-  right: 0px;
+  right: 0;
   width: 75px;
   height: 75px;
   background: papayawhip;
